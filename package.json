@@ -1,0 +1,29 @@
+{
+  "name": "dw-logbook-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "node index.js",
+    "start:dev": "nodemon index.js",
+    "migrate": "./node_modules/.bin/sequelize db:migrate",
+    "seed": "./node_modules/.bin/sequelize db:seed:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
+    "cron": "^1.7.0",
+    "dotenv": "^7.0.0",
+    "hapi": "^18.1.0",
+    "joi": "^14.3.1",
+    "pg": "^7.9.0",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.88.0",
+    "sequelize": "^5.5.0",
+    "sequelize-cli": "^5.4.0"
+  }
+}

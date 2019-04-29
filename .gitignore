@@ -1,0 +1,4 @@
+node_modules
+.env
+index logbook
+script.js
