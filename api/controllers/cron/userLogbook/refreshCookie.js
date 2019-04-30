@@ -50,8 +50,10 @@ const job = () => {
   .then( (userList) => {
     if (userList && userList.length > 0) {
       return Promise.mapSeries( userList, async (user) => {
-        const jar = await setCookie(JSON.parse(user.cookie).cookie);
-        return updateCookie(user.line_id, jar); 
+        if (user.cookie) {
+          const jar = await setCookie(JSON.parse(user.cookie).cookie);
+          return updateCookie(user.line_id, jar); 
+        };
       });
     }
   });
